@@ -34,6 +34,16 @@ class SkipList{
         };
 
         Node* head;
+        
+        size_t randomLevel(){ // randomLevel function taken from references
+            float r = (float)rand()/RAND_MAX;
+            int lvl = 0;
+            while (r < fraction && lvl < maxLevel){
+                lvl++;
+                r = (float)rand()/RAND_MAX;
+            }
+            return lvl;
+        }
 
     public:
         SkipList(){
@@ -122,16 +132,6 @@ class SkipList{
                 delete toDelete;
             }
             delete head;
-        }
-
-        size_t randomLevel(){ // randomLevel function taken from references
-            float r = (float)rand()/RAND_MAX;
-            int lvl = 0;
-            while (r < fraction && lvl < maxLevel){
-                lvl++;
-                r = (float)rand()/RAND_MAX;
-            }
-            return lvl;
         }
 
         void printLayer(size_t x, std::ostream& os=std::cout){ // utility function used for debugging
