@@ -3,9 +3,7 @@
 #include <time.h>
 
 int main(){
-    // A random number generator 
     // Using std::clock_t for time tracking
-    // Stuck with the srand for time because it's fun, even if it is inefficient sometimes
 
     std::cout << "Test Suite\n";
     std::cout << "CONTAINS TEST means that the list is being checked for all the elements that were inserted. If the list contains elements it shouldn't\nor is missing elements it should have, it fails.\n";
