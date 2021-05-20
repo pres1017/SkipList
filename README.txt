@@ -1,5 +1,11 @@
 For this project, I impelmented the skip lists data structure.
 
+The skip list functions similarly to a Linked List, except it can perform searches, deletions, and insertions in logarithmic time. 
+This is accomplished by having multiple "layers," where each layer holds its own smaller linked list. 
+The searching, deletion, and insertion algorithms start with a pointer at the top layer and 
+moves down as certain conditions are met. This skip list implementation inserts elements in ascending order. 
+
+
 skiplist.h contains the actual implementation, with the following public functions:
   -constructors and destructors, including explicit constructors and copy constructors
   -insert(Comparable obj), inserts desired templated object, returns true if successful and false if the object already exists
@@ -9,12 +15,7 @@ skiplist.h contains the actual implementation, with the following public functio
   -printLayer(size_t layer, std::ostream& os), prints the elements at the desired layer to the desired output stream
   -printElements(std::ostream& os), prints all elements in the list layer-by-layer
   
- skiptests.cpp contains a testing suite verifying everything from basic 
- functionality to more specific edge cases, and demonstrates how to properly use the data structure.
-  
-
-The skip list functions similarly to a Linked List, except it can perform searches, deletions, and insertions in logarithmic time. This is accomplished by having multiple "layers," where each layer holds its own smaller linked list. 
-The searching, deletion, and insertion algorithms start with a pointer at the top layer and 
-moves down as certain conditions are met. In addition, the skip list is inserted at all times.
+skiptests.cpp contains a testing suite verifying everything from basic 
+functionality to more specific edge cases, and demonstrates how to properly use the data structure.
 
 This project was developed independently. 
